@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aEy-Vu-1HE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Test View Controller-->
+        <scene sceneID="Rpx-VO-vlt">
+            <objects>
+                <viewController id="aEy-Vu-1HE" customClass="VideoTestViewController" customModule="AudioPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GRM-st-kep"/>
+                        <viewControllerLayoutGuide type="bottom" id="qIf-3b-S67"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gbc-Dt-HMA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-IA-m1Q">
+                                <rect key="frame" x="137.5" y="308.5" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.42745098040000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="D4g-qu-DAV"/>
+                                    <constraint firstAttribute="width" constant="100" id="n6i-Rh-29V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" red="0.1066850778" green="1" blue="0.08929490776" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordPressed:" destination="aEy-Vu-1HE" eventType="touchUpInside" id="1QS-bE-1ZM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J0X-IA-m1Q" firstAttribute="centerY" secondItem="gbc-Dt-HMA" secondAttribute="centerY" id="QFY-MC-cyO"/>
+                            <constraint firstItem="J0X-IA-m1Q" firstAttribute="centerX" secondItem="gbc-Dt-HMA" secondAttribute="centerX" id="cZz-PP-1tB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5yb-8h-WmG"/>
+                    </view>
+                    <connections>
+                        <segue destination="JYU-Z2-Sn5" kind="show" identifier="toAVPlayer" id="axX-6L-Nfo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rxg-rH-Rre" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1751" y="978"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="t2i-oa-exh">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="JYU-Z2-Sn5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1s-Kz-th0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-722" y="977"/>
+        </scene>
+    </scenes>
+</document>
